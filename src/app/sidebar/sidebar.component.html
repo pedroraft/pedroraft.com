@@ -1,0 +1,11 @@
+<h3 class="blog-title">{{blogName}}</h3>
+<div class="sidebar-content">
+  <h5 class="subtitle">{{funnyString}}</h5>
+  <ul class="menu">
+    <li><a [routerLink]="'/'">Posts</a></li>
+    <!--<a [routerLink]="'post/about'">About</a></li>-->
+    <li *ngFor="let link of links">
+      <a href="{{link.link}}" target="_blank">{{link.description}}</a></li>
+  </ul>
+</div>
+
