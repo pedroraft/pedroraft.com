@@ -1,7 +1,12 @@
-<h1>{{post?.title}}</h1>
+<div style="text-align: center;">
+  <h1>{{post?.title}}</h1>
+  <span>{{post?.date}}</span>
+</div>
+<hr>
 <markdown path="posts/{{post?.path}}/{{post?.slug}}.md" *ngIf="post?.slug"></markdown>
-<span>{{post?.date}}</span>
 <div *ngIf="!post" style="text-align: center;">
   <h1>404</h1>
   <h2>Not found, <a href="/">Go back</a></h2>
 </div>
+
+<disqus [identifier]="post?.slug" *ngIf="post?.slug"></disqus>

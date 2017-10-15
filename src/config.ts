@@ -7,5 +7,6 @@ export const config = {
   sidebarFunnyStrings: [
     'Something funny',
     'Something funny 2',
-  ]
+  ],
+  disqusName: 'pedroraft-com'
 };
