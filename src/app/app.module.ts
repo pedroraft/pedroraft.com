@@ -10,6 +10,7 @@ import { appRoutes } from './app.routes';
 import { MarkdownModule } from '../markdown/markdown.module';
 import { DisqusModule } from 'ngx-disqus';
 import { config } from '../config';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { config } from '../config';
     RouterModule.forRoot(appRoutes),
     DisqusModule.forRoot(config.disqusName)
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
