@@ -5,8 +5,8 @@ const path = 'blog-series';
 export const blogSeries: Post[] = [
   {
     title: 'Making my blog with angular and github pages like Jekyll',
-    date: '2017',
-    tags: ['angular', 'sass', 'milligram'],
+    date: '2017 - Work In Progress',
+    tags: ['angular', 'github', 'sass', 'milligram'],
     slug: 'making-my-blog-angular-github-pages',
     path: path
   },
