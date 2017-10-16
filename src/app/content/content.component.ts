@@ -16,10 +16,10 @@ export class ContentComponent implements OnInit {
 
   // TODO: include metadata and other seo optimizations
   ngOnInit () {
-    // take the url http://localhost:4200/post/file
-    // the window.location.pathname = /post/file
+    // take the url http://localhost:4200/#/post/file
+    // the window.location.hash = #/post/file
     // after substring = file
-    this.post = postIndex.find((p) => p.slug === window.location.pathname.substring(6));
+    this.post = postIndex.find((p) => p.slug === window.location.hash.substring(7));
     if (this.post) {
       this.title.setTitle(this.post.title);
     }
