@@ -5,8 +5,7 @@ export const config = {
     {link: 'https://gitlab.com/pedroraft', description: 'GitLab'},
   ],
   sidebarFunnyStrings: [
-    'Something funny',
-    'Something funny 2',
+    '"Talk is cheap. Show me the code."',
   ],
   disqusName: 'pedroraft-com'
 };

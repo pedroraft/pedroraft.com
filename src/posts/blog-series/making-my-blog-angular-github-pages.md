@@ -3,7 +3,7 @@
   <img src="/assets/logo/github-pages.png" alt="githubpages" style="max-height:100px;">
 </div>
 
-### **TL;DR:** Step by step on how i made a dead simple blog in angular. And how you can use it. [Code is here](https://github.com/pedroraft/pedroraft.com/)
+### **TL;DR:** Step by step on how i made a dead simple blog in angular.[Code is here](https://github.com/pedroraft/pedroraft.com/)
 ## **# Intro**
 
 [Angular](https://angular.io/) is really the coolest thing i learned in a while, naturaly when i tought about making a blog i knew i would code it myself and it would be angular. I don't intent to make a full framework or product out of this, just a boilerplate for other people that want to use this.
