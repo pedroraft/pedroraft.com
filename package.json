@@ -32,6 +32,7 @@
     "ngx-disqus": "^2.2.1",
     "open-color": "^1.5.1",
     "prismjs": "^1.6.0",
+    "raven-js": "^3.19.1",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },

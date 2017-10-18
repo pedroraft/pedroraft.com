@@ -23,9 +23,7 @@ export class ContentComponent implements OnInit {
       if (this.post) {
         this.title.setTitle(this.post.title);
       }
-      console.log(val.section);
       window.onload = function () {
-        console.log(document.querySelectorAll('*[id]'));
         if (val.section && document.getElementById(val.section)) {
           document.getElementById(val.section).scrollIntoView(true);
         }
