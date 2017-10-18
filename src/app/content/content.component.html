@@ -1,6 +1,6 @@
 <div style="text-align: center;">
   <h1>{{post?.title}}</h1>
-  <span>{{post?.date}}</span>
+  <span>{{post?.date | date : 'fullDate'}}</span>
 </div>
 <hr>
 <markdown path="posts/{{post?.path}}/{{post?.slug}}.md" *ngIf="post?.slug"></markdown>

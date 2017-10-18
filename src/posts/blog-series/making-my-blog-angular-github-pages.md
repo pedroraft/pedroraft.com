@@ -17,7 +17,7 @@ If you ain't familiar with [github pages](https://pages.github.com/), [jekyll](h
 
 
 This is like Jekyll, there is no back-end server or API, just static hosting of files, the difference is that instead of generating the html on the compilation process we generate it on the client dynamically.
-Process to create a new post on both is the mostly same, create a markdown(.md ) file then commit and push to git, on a branch called gh-pages by default, github will generate your website with your newly created post.
+Process to create a new post on both is the mostly same, create a markdown(.md ) file then commit and push to git, on a branch called gh-pages by default, GitHub will generate your website with your newly created post.
 
 ---
 
@@ -148,12 +148,12 @@ export const config = {
 
 ## **# Deploying to GitHub Pages and associating custom domain**
 
-Jekyll deploys automagically on github, angular code.. not so much. But there is a library for that [angular-cli-ghpages](https://github.com/angular-buch/angular-cli-ghpages). Just:
+Jekyll deploys automagically on GitHub, angular code.. not so much. But there is a library for that [angular-cli-ghpages](https://github.com/angular-buch/angular-cli-ghpages). Just:
 ```bash
 ng build --prod
 ngh
 ```
-The cli will setup a branch called gh pages and deploy to it. Just make your dns configuration next, [Github has a guide for this](https://help.github.com/articles/using-a-custom-domain-with-github-pages/). Basically point the dns to github server, go to the repository settings and set your domain name.
+The cli will setup a branch called gh pages and deploy to it. Just make your dns configuration next, [Github has a guide for this](https://help.github.com/articles/using-a-custom-domain-with-github-pages/). Basically point the dns to GitHub server, go to the repository settings and set your domain name.
 
 ## In another post i'll talk about how to use this as a **boilerplate** for yourself.
 ## Later i will likely set an automatic build and deploy as well.
