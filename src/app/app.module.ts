@@ -10,7 +10,6 @@ import { appRoutes } from './app.routes';
 import { MarkdownModule } from '../markdown/markdown.module';
 import { DisqusModule } from 'ngx-disqus';
 import { config } from '../config';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import * as Raven from 'raven-js';
 
 Raven
@@ -38,7 +37,6 @@ export class RavenErrorHandler implements ErrorHandler {
     DisqusModule.forRoot(config.disqusName)
   ],
   providers: [
-    {provide: LocationStrategy, useClass: HashLocationStrategy},
     {provide: ErrorHandler, useClass: RavenErrorHandler}
   ],
   bootstrap: [AppComponent]
