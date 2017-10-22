@@ -7,7 +7,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { ListComponent } from './list/list.component';
 import { appRoutes } from './app.routes';
-import { MarkdownModule } from '../markdown/markdown.module';
+import { MarkdownModule } from './markdown/markdown.module';
 import { DisqusModule } from 'ngx-disqus';
 import { config } from '../config';
 import * as Raven from 'raven-js';

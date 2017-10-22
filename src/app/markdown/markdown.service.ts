@@ -67,8 +67,8 @@ export class MarkdownService {
     return Observable.throw(errMsg);
   }
 
-  // extend marked render to support todo checkbox
   private extendRenderer () {
+    // extend marked render to support todo checkbox
     this._renderer.listitem = function (text: string) {
       if (/^\s*\[[x ]\]\s*/.test(text)) {
         text = text
@@ -82,6 +82,14 @@ export class MarkdownService {
       } else {
         return '<li>' + text + '</li>';
       }
+    };
+
+    // extend marked render to support anchor links
+    this._renderer.link = function (href: string, title: string, text: string) {
+      const titleAttr = title ? `title=${title}` : '';
+      const hrefAttr = href.startsWith('#') ?
+        `href="${window.location.href}${href}"` : `href="${href}"`;
+      return `<a ${hrefAttr} ${titleAttr}>${text}</a>`;
     };
   }
 }
