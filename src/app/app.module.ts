@@ -13,7 +13,7 @@ import { config } from '../config';
 import * as Raven from 'raven-js';
 
 Raven
-  .config('https://481cf86d8cd24bdd903031598d36cce4@sentry.io/232119')
+  .config(config.sentryDsn)
   .install();
 
 
