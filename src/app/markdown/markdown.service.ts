@@ -87,8 +87,10 @@ export class MarkdownService {
     // extend marked render to support anchor links
     this._renderer.link = function (href: string, title: string, text: string) {
       const titleAttr = title ? `title=${title}` : '';
+      const location = window.location.href.includes('#') ?
+        window.location.href.split('#')[0] : window.location.href;
       const hrefAttr = href.startsWith('#') ?
-        `href="${window.location.href}${href}"` : `href="${href}"`;
+        `href="${location}${href}"` : `href="${href}"`;
       return `<a ${hrefAttr} ${titleAttr}>${text}</a>`;
     };
   }
