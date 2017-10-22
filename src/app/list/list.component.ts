@@ -10,7 +10,7 @@ import { postIndex } from '../../posts/post-index';
   templateUrl: './list.component.html'
 })
 export class ListComponent implements OnInit, OnDestroy {
-  public indexFiltered: Post[];
+  public index: Post[];
   public selectedTag: string;
   private sub: any;
 
@@ -21,7 +21,7 @@ export class ListComponent implements OnInit, OnDestroy {
 
   ngOnInit () {
     this.title.setTitle(config.blogName);
-    this.indexFiltered = postIndex;
+    this.index = postIndex;
     this.sub = this.route.params.subscribe(params => {
       this.selectedTag = params['tag'];
       this.filter();
@@ -34,7 +34,7 @@ export class ListComponent implements OnInit, OnDestroy {
 
   filter (): void {
     if (this.selectedTag) {
-      this.indexFiltered = postIndex.filter((p) => p.tags.includes(this.selectedTag));
+      this.index = postIndex.filter((p) => p.tags.includes(this.selectedTag));
     }
   }
 

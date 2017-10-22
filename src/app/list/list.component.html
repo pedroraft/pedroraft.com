@@ -1,10 +1,10 @@
-<div *ngFor="let item of indexFiltered">
-  <h2 class="link" [routerLink]="['/post', item.slug]">{{item.title}}</h2>
-  <span>{{item.date | date : 'fullDate'}}</span><br><br>
-  <a *ngFor="let tag of item.tags" class="button button-outline button-sm" (click)="toggleTag(tag)"
+<div *ngFor="let post of index">
+  <h2 class="link" [routerLink]="['/post', post.slug]">{{post.title}}</h2>
+  <span>{{post.date | date : 'fullDate'}}</span><br><br>
+  <a *ngFor="let tag of post.tags" class="button button-outline button-sm" (click)="toggleTag(tag)"
      style="margin-left: 5px;" [ngClass]="{'active': tag === selectedTag}">{{tag}}</a>
   <hr>
 </div>
-<div *ngIf="indexFiltered?.length === 0">
+<div *ngIf="index?.length === 0">
   <h2>No post found, tag {{selectedTag}}</h2>
 </div>
