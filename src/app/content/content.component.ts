@@ -18,12 +18,23 @@ export class ContentComponent implements OnInit {
                private meta: Meta) {
   }
 
-  // TODO: include metadata and other seo optimizations
   ngOnInit () {
     this.activatedRoute.params.subscribe((val) => {
       this.post = postIndex.find((p) => p.slug === val.name);
       if (this.post) {
         this.title.setTitle(this.post.title);
+        const meta = this.post.meta ? this.post.meta : this.post.title;
+
+        // there is room for improvements here
+        this.meta.addTags([
+          {name: 'Description', content: meta},
+          {property: 'og:title', content: this.post.title},
+          {property: 'og:url', content: window.location.href},
+          {property: 'og:description', content: meta},
+          {property: 'og:image', content: this.post.thumb},
+          {property: 'og:type', content: config.ogType},
+          {property: 'og:locale', content: config.ogLocale},
+        ]);
       }
     });
   }

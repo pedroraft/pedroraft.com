@@ -17,5 +17,7 @@ export const config = {
     '"Fast, Good, Cheap. Pick two."'
   ],
   disqusName: 'pedroraft-com',
-  sentryDsn: 'https://481cf86d8cd24bdd903031598d36cce4@sentry.io/232119'
+  sentryDsn: 'https://481cf86d8cd24bdd903031598d36cce4@sentry.io/232119',
+  ogType: 'article',
+  ogLocale: 'en_US'
 };

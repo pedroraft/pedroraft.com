@@ -6,13 +6,14 @@ export const blogSeries: Post[] = [
   {
     title: 'How to setup Travis CI with Angular and GitHub Pages',
     date: new Date('10/18/2017'),
+    thumb: '/assets/logo/travis-ci.png',
     tags: ['angular', 'github', 'travis-ci'],
     slug: 'setup-travis-ci-angular-github-pages',
     path: path
   },
-/*  {
+ /*{
     title: 'How to copy this blog for yourself',
-    subtitle: '2017 - Work In Progress',
+    date: new Date('10/19/2017'),
     tags: [],
     slug: 'how-to-copy-this-blog-for-yourself',
     path: path
@@ -20,7 +21,7 @@ export const blogSeries: Post[] = [
   {
     title: 'Making my blog with angular and github pages like Jekyll',
     date: new Date('11/12/1996'),
-    subtitle: '2017 - Work In Progress',
+    thumb: '/assets/logo/angular.png',
     tags: ['angular', 'github', 'sass', 'milligram'],
     slug: 'making-my-blog-angular-github-pages',
     path: path
