@@ -1,8 +1,15 @@
 <div *ngFor="let post of index">
-  <h2 class="link" [routerLink]="['/post', post.slug]">{{post.title}}</h2>
-  <span>{{post.date | date : 'fullDate'}}</span><br><br>
-  <a *ngFor="let tag of post.tags" class="button button-outline button-sm" (click)="toggleTag(tag)"
-     style="margin-left: 5px;" [ngClass]="{'active': tag === selectedTag}">{{tag}}</a>
+  <h2 class="link"
+      [routerLink]="['/post', post.slug]"
+      style="margin-bottom: 5px;">{{post.title}}</h2>
+  <div *ngIf="post.date">
+    <span>{{post.date | date : 'fullDate'}}</span><br><br>
+  </div>
+  <a *ngFor="let tag of post.tags"
+     class="button button-outline button-sm"
+     (click)="toggleTag(tag)"
+     style="margin-left: 5px;"
+     [ngClass]="{'active': tag === selectedTag}">{{tag}}</a>
   <hr>
 </div>
 <div *ngIf="index?.length === 0">

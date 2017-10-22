@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from './post.model';
 import { Meta, Title } from '@angular/platform-browser';
 import { postIndex } from '../../posts/post-index';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { config } from '../../config';
 
 @Component({
   selector: 'app-content',
@@ -10,6 +11,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 })
 export class ContentComponent implements OnInit {
   public post: Post;
+  public disqusEnabled = config.disqusName;
 
   constructor (private activatedRoute: ActivatedRoute,
                private title: Title,

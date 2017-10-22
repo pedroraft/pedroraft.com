@@ -3,10 +3,12 @@
   <span>{{post?.date | date : 'fullDate'}}</span>
 </div>
 <hr>
-<markdown path="posts/{{post?.path}}/{{post?.slug}}.md" *ngIf="post?.slug"></markdown>
+<markdown path="posts/{{post?.path}}/{{post?.slug}}.md"
+          *ngIf="post?.slug"></markdown>
 <div *ngIf="!post" style="text-align: center;">
   <h1>404</h1>
   <h2>Not found, <a href="/">Go back</a></h2>
 </div>
 
-<disqus [identifier]="post?.slug" *ngIf="post?.slug"></disqus>
+<disqus [identifier]="post?.slug"
+        *ngIf="post?.slug && disqusEnabled"></disqus>
