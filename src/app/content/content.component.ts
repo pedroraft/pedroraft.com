@@ -23,11 +23,6 @@ export class ContentComponent implements OnInit {
       if (this.post) {
         this.title.setTitle(this.post.title);
       }
-      window.onload = function () {
-        if (val.section && document.getElementById(val.section)) {
-          document.getElementById(val.section).scrollIntoView(true);
-        }
-      };
     });
   }
 }

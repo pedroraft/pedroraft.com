@@ -6,6 +6,5 @@ export const appRoutes: Routes = [
   {path: 'list', component: ListComponent},
   {path: 'list/:tag', component: ListComponent},
   {path: 'post/:name', component: ContentComponent},
-  {path: 'post/:name/:section', component: ContentComponent},
   {path: '**', redirectTo: 'list'},
 ];
